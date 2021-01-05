@@ -4,7 +4,7 @@ Systemd-service to be called when another service throws an error.
 
 ## Install
 
-1. Clone the project: `git clone `
+1. Clone the project: `git clone https://github.com/almliden/systemd-email-service-installer.git`
 2. `chmod +x ~/service-install-email-notification/installer.sh`
 3. Configure the `msmtprpc`, `status-email-user@.service` and `systemd-email.sh` as neccessary
 4. `sudo ~/service-install-email-notification/installer.sh`
@@ -18,7 +18,7 @@ Perform the steps below to prepare for installation.
 
 Take a look at the `msmtprcp.example` file and fill in values in the `msmtprpc`-file as neccessary as this will be copied.
 
-(Wan't git not to track this file? `git update-index --skip-worktree msmtprpc`)
+(To make git stop tracking that file: `git update-index --skip-worktree msmtprpc`, if you want to make changes and commit, `git update-index --no-skip-worktree msmtprpc` to start tracking the file again and `git ls-files -v|grep '^S'` to list all the files that are skipped.)
 
 ### status-email-user@.service
 
