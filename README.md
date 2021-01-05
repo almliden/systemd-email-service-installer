@@ -16,7 +16,9 @@ Perform the steps below to prepare for installation.
 
 ### msmtprpc
 
-Take a look at the `msmtprcp.example` file and fill in values in msmtprpc as neccessary.
+Take a look at the `msmtprcp.example` file and fill in values in the `msmtprpc`-file as neccessary as this will be copied.
+
+(Wan't git not to track this file? `git update-index --skip-worktree msmtprpc`)
 
 ### status-email-user@.service
 
