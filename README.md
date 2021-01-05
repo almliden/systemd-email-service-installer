@@ -5,12 +5,12 @@ Systemd-service to be called when another service throws an error.
 ## Install
 
 1. Clone the project: `git clone https://github.com/almliden/systemd-email-service-installer.git`
-2. `chmod +x ~/service-install-email-notification/installer.sh`
+2. `cd ./systemd-email-service-installer && chmod +x installer.sh`
 3. Configure the `msmtprpc`, `status-email-user@.service` and `systemd-email.sh` as neccessary
-4. `sudo ~/service-install-email-notification/installer.sh`
+4. `sudo ./installer.sh`
 5. Add `OnFailure` to the services you want notifications from
 
-## Configuration pre-install
+## Pre-install Configuration (step 3)
 
 Perform the steps below to prepare for installation.
 
@@ -36,6 +36,6 @@ Change to the correct name of the email account that was specified in the `msmtp
 
 This would use the account `nameoftheaccount` to send an email.
 
-## Configure Services
+## Configure Services (step 5)
 
 To enable emails from another service, add the following to the service-unit `OnFailure=status-email-user@%n.service`. That one is typically located in `/etc/systemd/system/<service-name>.service`.
